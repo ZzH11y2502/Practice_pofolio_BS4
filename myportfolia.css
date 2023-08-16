@@ -1,0 +1,183 @@
+header{
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+}
+
+header a {
+    color: white;
+}
+
+header .active a {
+    position: relative;
+}
+
+header .active a::before {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 0%;
+    background: greenyellow;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s;
+    color: white;
+}
+
+header a:hover::before , header a:active::before{
+    width: 100%;
+
+}
+
+header .nav-item {
+    margin-left: 20px;
+}
+
+.container{
+    width: 70%;
+    margin: auto;
+}
+.banner .carousel-item img {
+    height: 100vh;
+    min-height: 500px;
+}
+
+
+
+.banner .carousel-caption img {
+    width: 200px;
+    height: 200px;
+    min-height: unset;
+    border-radius: 50%;
+}
+
+.banner .carousel-caption {
+    bottom: 50%;
+    transform: translateY(50%);
+}
+
+.banner .carousel-item::before {
+    position: absolute;
+    content: "";
+    background-color: rgba(0,0,0,0.5);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-indicators li.active{
+    background-color: greenyellow;
+
+}
+
+
+.carousel-indicators li{
+    height: 20px !important;
+    width: 20px !important;
+    border-radius: 100%;
+}
+
+/* Projects */
+.project_tabs .nav {
+    display: flex;
+    justify-content: center;
+}
+
+.project_tabs .nav-pills .nav-link.active  {
+    background: greenyellow;
+    border: none;
+    color: white;
+}
+
+.project_tabs .nav-pills .nav-link  {
+    border: 1px solid black;
+    color: black;
+    text-transform: capitalize;
+}
+
+.project_tabs .nav-item {
+    margin: 0 20px;
+}
+
+/* Projects */
+
+.project-item {
+    padding: 15px;
+}
+
+.project-item .card {
+    border-radius: 16px;
+    overflow: hidden;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.project-item .card-body {
+    border-bottom-left-radius: 16px ;
+    border-bottom-right-radius: 16px;
+    border-top: none;
+    border: 1px solid transparent;
+}
+
+.project-item:hover .card-body {
+    border-top: none;
+    border: 1px solid greenyellow;
+}
+
+.project-item h5 {
+    transition: 0.3s;
+}
+
+.project-item :hover h5 {
+    color: greenyellow;
+}
+
+/* Experience */
+.experience {
+    background-image: url(./image/3.jpg);
+
+}
+
+.experience_item {
+    text-align: center;
+    color: white;
+    padding: 20px;
+    border: 1px solid white;
+    border-radius: 16px;
+    backdrop-filter: blur(3px);
+    transition: 0.5s;
+}
+
+.experience_item:hover {
+    background-color: black;
+    cursor: not-allowed;
+}
+
+.experience_item i{
+    font-size: 40px;
+    color: greenyellow;
+}
+
+/* BREAK POINT BS4 */
+/* min-width ~ mobile 1st*/
+/* max-width ~ desktop 1st*/
+
+.footer {
+    height:300px;
+    width: 100%;
+}
+
+
+@media screen and (min-width: 900px) {
+    .footer {
+        background-color: brown ;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .footer {
+        background-color: green ;
+    }
+}
